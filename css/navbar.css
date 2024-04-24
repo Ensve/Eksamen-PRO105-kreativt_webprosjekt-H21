@@ -1,0 +1,78 @@
+/*Styling og plassering av navigasjonsbar*/
+
+#navbar{
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    height: 100%;
+    background: transparent;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 80px;
+    padding-left: 80px;
+    opacity: 0;
+    /* Animasjon på navvigasjonsbar */
+    animation-name: fadeInNav;
+    animation-duration: 0.8s;
+    animation-delay: 2.1s;
+    animation-fill-mode: forwards;
+}
+
+/* Keyframes til animasjon av navigasjonsbar */
+@keyframes fadeInNav{
+    from{
+        opacity: 0;
+        transform: scale(1.15);
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.logo-div img{
+    align-self: flex-start;
+    height: 80px;
+    width: 100%;
+}
+
+#navbar a{
+    color: black;
+    text-decoration: none;
+    transition: 0.5s;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+#navbar li{
+    transition: 0.5s;
+    padding: 10px;
+}
+
+#navbar a:hover{
+    color: white;
+}
+
+#navbar li:hover{
+    transform: scale(1.1);
+}
+
+.nav-list{
+    list-style-type: none;
+}
+
+.nav-list .list-item{
+    display: inline-block;
+    padding: 30px 10px;
+}
+
+.nav-list .list-item:nth-child(1){
+    margin-right: 50px;
+}
+
+.nav-list .list-item:nth-child(2){
+    margin-right: 50px;
+}

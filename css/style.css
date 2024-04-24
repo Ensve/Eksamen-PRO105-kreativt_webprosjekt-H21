@@ -1,0 +1,306 @@
+*{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.400));
+    background-color: rgba(27, 112, 165, 0.746);
+    overflow-x: hidden;
+}
+
+/* MAIN PAGE */
+
+#mainPage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 88.5vh;
+}
+
+.info-wrapper{
+    position: relative;
+    padding: 25px;
+    width: 40%;
+    height: 40%;
+    background-color: rgba(148, 148, 148, 0.15);  
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.198);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.info-wrapper h1{
+    text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+    font-size: 40px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 10%;
+}
+
+
+.info-wrapper p{
+    font-size: 25px;
+    margin-bottom: 50px;
+    width: 25ch;
+    /* Animasjon på p tag */
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 40%;
+}
+
+/* Animasjon av p tag i infowrapper */  
+@keyframes typing {
+    from {
+      width: 0;
+    }
+}
+      
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Lego figur */
+.lego-wrapper{
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: auto;
+    left: 200px;
+    top: 40%;
+}
+
+.lego-wrapper img{
+    height: 40%;
+    transform: scaleX(-1);
+}
+
+/* Styling av knapp inni info wrappper */
+
+.main-btn a{
+    text-decoration: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+#space{
+    padding: 20px;
+}
+
+.main-btn{
+    position: absolute;
+    cursor: pointer;
+    transition: 0.4s;
+    height: 60px;
+    width: 130px;
+    background-color: #2E4053;
+    border-radius: 15px;
+    border: none;
+    bottom: 10%;
+}
+
+.main-btn:hover{
+    transform: scale(1.1);
+}
+
+/* TIMELINE SIDE */
+
+.section{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #e6e6e6;
+}
+
+.sectionWrapper {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+}
+
+/* Tidslinje elementet */
+
+.a{
+    font-size: 30px;
+    text-align: center;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    width: 300px;
+}
+
+
+.b{
+    position: absolute;
+    top: 350px;
+    left: 30px;
+    width: 300px;
+    height: 200px;
+}
+
+.c{
+    position: absolute;
+    top: 5px;
+    left: 50px;
+    width: 300px;
+    height: 300px;
+}
+
+.c img {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.time-line-branch{
+    margin: 0;
+    position: relative;
+    margin-left: 50%;
+    transform: translate(-50%);
+    width: 20px;
+    height: 100vh;
+    background-color: #2E4053;
+}
+
+.time-line-branch::before {
+    content:"";
+    position: absolute;
+    top: 25%;
+    transform: rotate(90deg);
+    left: 150px;
+    background-color: #2E4053;
+    width: 60%;
+    height: 300px;
+    border-radius: 24px;
+}
+
+.time-line-branch::after {
+    content:"";
+    position: absolute;
+    top: 10%;
+    transform: rotate(-90deg);
+    right: 150px;
+    background-color: #2E4053;
+    width: 60%;
+    height: 300px;
+    border-radius: 24px;
+}
+
+/* Knapper for navigering */
+
+.site-btns{
+    top: 50%;
+    transform: translateY(-50%);
+    position: fixed;
+    margin-left: 50px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px;
+    height: 200px;
+    width: 40px;
+    background-color: rgb(255, 167, 24);
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px 1px rgba(128, 128, 128, 0.767);
+    border: 1px solid rgba(128, 128, 128, 0.664);
+    opacity: 0;
+    /* Animasjon navigasjonsknappene */
+    animation-name: fadeInBtns;
+    animation-duration: 0.8s;
+    animation-delay: 2.1s;
+    animation-fill-mode: forwards;
+}
+
+.site-btns::after{
+    z-index: -2;
+    position: absolute;
+    border-radius: 10px;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.596) inset;
+}
+
+#minikit, #minikit_static {
+    margin-left: -8px;
+}
+
+.site-btns button{
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.site-btns a{
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background-color: transparent;
+}
+
+.site-btns img{
+    height: 100%;
+}
+
+.site-btns .static{
+    opacity: 1;
+}
+
+.site-btns .gif{
+    transition: 0.1s;
+    position: relative;
+    transform: translateY(-44px);
+    opacity: 0;
+}
+
+.site-btns .gif:hover{
+    background-color: rgb(255, 167, 24);
+    opacity: 1;
+    display: block;
+}
+
+/* Keyframes til animasjon av navigasjonsknappene */
+
+@keyframes fadeInBtns{
+    from{
+        opacity: 0;
+        transform: scale(1.15);
+    }
+    to{
+        opacity: 1;
+    }
+}

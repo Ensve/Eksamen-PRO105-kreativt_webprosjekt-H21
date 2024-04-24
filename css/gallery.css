@@ -1,0 +1,95 @@
+*{
+    scroll-behavior: smooth;
+}
+body {
+    width: 100vw;
+    padding: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    background: linear-gradient(rgb(255, 254, 254), rgba(252, 252, 252, 0.74));
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+/* FORSIDEN*/
+
+.main-page-g {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 86vh;
+}
+
+.info-div {
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-div h1 {
+    letter-spacing: 1px;
+    font-size: 40px;
+    margin: 5px;
+    /*animasjon*/
+    opacity: 0;
+    animation: fadein 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadein {
+    from { opacity: 0; transform: scale(1.15);}
+    to {opacity: 1;}
+}
+
+.info-div p {
+    font-size: 20px;
+    margin: 60px;
+    /*animasjon*/
+    opacity: 0;
+    animation: fadein 2s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+
+}
+
+.info-div img {
+    width: 25%;
+    /*animasjon*/
+    transform: rotate(90deg);
+    opacity: 0;
+    animation: fadein 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+/*BILDER*/
+.img-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 100%;
+    height: auto;
+    user-select: none;
+    /*animasjon*/
+    opacity: 0;
+    transition: 1s ease;
+}
+
+.img-div img {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-div:hover {
+    opacity: 1;
+    transition: 2s ease;
+}
