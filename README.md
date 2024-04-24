@@ -7,9 +7,11 @@ This repository contains the submission for the Kreativ Webprosjekt exam from HÃ
 To get a local copy up and running, follow these simple steps:
 
 1. Clone the repository to your local machine using:
- git clone [https://github.com/Ensve/Eksamen-PRO105-kreativt_webprosjekt-H21/settings/pages]
+ ```bash
+   git clone [https://github.com/Ensve/Eksamen-PRO105-kreativt_webprosjekt-H21]
+```
 
- Or try it live here: [Live demo]()
+ Or try it live here: [Live demo](https://ensve.github.io/Eksamen-PRO105-kreativt_webprosjekt-H21/html/index.html)
 
 ## Restrictions for the exam
 
